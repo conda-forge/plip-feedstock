@@ -1,6 +1,6 @@
 context:
   name: plip
-  version: 2.3.1
+  version: 3.0.0
 
 package:
   name: ${{ name|lower }}
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 8d62c798b5ef6f3ae6ddd72e87c353bff8263e557dfa5f6ecf699cdf975f04ce
+  sha256: d53a46369f10fa467503f19ffec4436b3a123f355e8b9c8aca5a8052b8aef47a
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: python -m pip install . --no-build-isolation -vv
   python:
@@ -27,7 +27,7 @@ requirements:
     - python >=${{ python_min }}
     - lxml >=4.2.1
     - numpy >=1.13.3
-    - openbabel >=3.0.0
+    - openbabel >=3.1.1
   run_constraints:
     - ImageMagick >=7.0
     - pymol-open-source >=2.3.0
